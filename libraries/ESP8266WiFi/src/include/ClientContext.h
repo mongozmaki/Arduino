@@ -450,6 +450,7 @@ protected:
                 _written += next_chunk;
                 need_output = true;
             } else {
+                Serial.printf("err: %d, next_chunk %d, will_send, %d, left: %d\n", (int)err,next_chunk, will_send,left);
 		// ERR_MEM(-1) is a valid error meaning
 		// "come back later". It leaves state() opened
                 break;
